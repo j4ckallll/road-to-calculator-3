@@ -8,9 +8,10 @@ int main()
   {
     scanf("%d",&a[i]);
   }
+  printf("Entered values are :  ");
   for(i=0;i<5;i++)
   {
-    printf("\nThe entered values are :%d",a[i]);
+    printf("%d \t",a[i]);
    } 
 
 }
