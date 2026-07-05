@@ -2,19 +2,29 @@
 #include <stdlib.h>
 int main() 
 {
-  int limit,arr[10000],i,sum=0;
-  printf("enter the limiit :");
+  int limit,arr[1000],i,search,flag=0;
+  printf("Enter the the limit :");
   scanf("%d",&limit);
-  printf("enter the values :\n");
+   printf("enter the value :\n" );
+  for (i=0;i<limit;i++)
+  {
+    scanf("%d", &arr[i]);
+  }
+  printf("please enter the searchkey :");
+  scanf("%d",&search);
   for(i=0;i<limit;i++)
   {
-    scanf("%d",&arr[i]);
+    if(search==arr[i])
+    {
+      printf("The number exists in %d",i+1);
+      flag=1;
+      break;
+    }
   }
-  for(i=0;i<limit;i++)
+  if(flag==0)
   {
-    sum = sum + arr[i];
+    printf("The value dosent exists");
   }
-  printf("result : %d",sum);
   
 }
 
