@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main() 
 {
-  int limit,arr[1000],i,search,flag=0;
+  int limit,arr[1000],i,search,flag=0,j,temp;
   printf("Enter the the limit :");
   scanf("%d",&limit);
    printf("enter the value :\n" );
@@ -10,20 +10,22 @@ int main()
   {
     scanf("%d", &arr[i]);
   }
-  printf("please enter the searchkey :");
-  scanf("%d",&search);
-  for(i=0;i<limit;i++)
+  for(i=0;i<limit-1;i++)
   {
-    if(search==arr[i])
+    for(j=i+1;j<limit;j++)
     {
-      printf("The number exists in %d",i+1);
-      flag=1;
-      break;
+      if(arr[i]>arr[j])
+      {
+      temp=arr[j];
+      arr[j]=arr[i];
+      arr[i]=temp;
+      } 
     }
   }
-  if(flag==0)
+  printf("sorted value :\n");
+  for(i=0;i<limit;i++)
   {
-    printf("The value dosent exists");
+  printf(" %d\t",arr[i]);
   }
   
 }
