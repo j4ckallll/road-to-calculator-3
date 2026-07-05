@@ -2,20 +2,19 @@
 #include <stdlib.h>
 int main() 
 {
-  int a[10000],i;
-  int limit;
-  printf("Enter array limit : ");
+  int limit,arr[10000],i,sum=0;
+  printf("enter the limiit :");
   scanf("%d",&limit);
-  printf("enter the values to store in array :\n");
+  printf("enter the values :\n");
   for(i=0;i<limit;i++)
   {
-    scanf("%d",&a[i]);
+    scanf("%d",&arr[i]);
   }
-  printf("Entered values are :  ");
   for(i=0;i<limit;i++)
   {
-    printf("%d \t",a[i]);
-   } 
-
+    sum = sum + arr[i];
+  }
+  printf("result : %d",sum);
+  
 }
 
