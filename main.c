@@ -1,26 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+void sum();
 int main() 
 {
-  int i,j,value[3][3];
-  printf("enter the values :\n");
-  for(i=0;i<3;i++)
-  {
-    for(j=0;j<3;j++)
-    {
-      scanf("%d",&value[i][j]);
-    }
-    
-  }
-  printf("the entered numbers are: \n");
-  for(i=0;i<3;i++)
-  {
-    for(j=0;j<3;j++)
-    {
-      printf("%d\t",value[i][j]);
-    }
-    printf("\n");
-  }
+  sum();
+  sum();
+  return EXIT_SUCCESS;
+}
+void sum()
+{
+  int num1,num2,sum;
+  printf("enter the numbers : \n");
+  scanf("%d%d",&num1,&num2);
+  sum=num1+num2;
+  printf("%d",sum);
+  
 }
  
 
